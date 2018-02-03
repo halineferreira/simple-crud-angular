@@ -9,6 +9,9 @@ export class EmployeesComponent implements OnInit {
 
   txtNome: string;
   txtEmail: string;
+  txtEditNome: string;
+  txtEditEmail: string;
+  iEdit: number;
 
   employees: any[] = [
       {nome: 'Maria Machado',   email:'maria@gmail.com'},
@@ -33,9 +36,14 @@ export class EmployeesComponent implements OnInit {
   removeItem(i){
     this.employees.splice(i, 1);
   }
-  editItem(){
-
+  editItem(i){
+    this.txtEditNome = this.employees[i].nome;
+    this.txtEditEmail = this.employees[i].email;
+    this.iEdit = i;
   }
-
+ saveChanges(){
+    this.employees[this.iEdit].nome = this.txtEditNome;
+    this.employees[this.iEdit].email = this.txtEditEmail;
+ }
 
 }
