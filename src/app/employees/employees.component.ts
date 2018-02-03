@@ -23,12 +23,15 @@ export class EmployeesComponent implements OnInit {
   ngOnInit() {
   }
 
-  addItem(form){
-    this.employees.push({'nome': form.value.nome, 'email': form.value.email });
+  addItem(){
+    if(this.txtNome != null && this.txtEmail != null){
+      this.employees.push({'nome': this.txtNome, 'email': this.txtEmail });
+      this.txtEmail = this.txtNome = null;
+    }
   }
 
-  removeItem(){
-
+  removeItem(i){
+    this.employees.splice(i, 1);
   }
   editItem(){
 
