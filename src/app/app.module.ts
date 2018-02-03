@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
-
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { EmployeesComponent } from './employees/employees.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

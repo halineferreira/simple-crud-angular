@@ -31,12 +31,30 @@
             <td>{{employee.nome}}</td>
             <td>{{employee.email}}</td>
             <td class="actions">
-              <button type="button" class="btn btn-warning btn-xs" (click)="editItem()">Editar</button>
+              <button type="button" class="btn btn-warning btn-xs" (click)="staticModal.show(i)">Editar</button>
               <button type="button" class="btn btn-danger btn-xs" (click)="removeItem(i)">Excluir</button>
             </td>
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Static modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" [(ngModel)] = "txtNome">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)] = "txtEmail">
+      </div>
     </div>
   </div>
 </div>
