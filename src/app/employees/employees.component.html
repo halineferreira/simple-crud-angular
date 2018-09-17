@@ -1,4 +1,4 @@
-<div class="container">
+<div>
   <br/>
   <h1>Cadastro de Funcionários</h1>
 
@@ -57,9 +57,9 @@
         <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)] = "txtEditEmail">
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-default" (click)="staticModal.hide()">Cancelar</button>
+          <button type="button" class="btn btn-default mr-3" (click)="staticModal.hide()">Cancelar</button>
           <button type="button" class="btn btn-primary" (click)="saveChanges(); staticModal.hide()">Salvar</button>
-        </div>
+      </div>
     </div>
   </div>
 </div>

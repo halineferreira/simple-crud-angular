@@ -25,8 +25,8 @@
     "core-js": "^2.4.1",
     "ngx-bootstrap": "^2.0.2",
     "rxjs": "^6.3.2",
-    "zone.js": "^0.8.26",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "rxjs-compat": "^6.3.2",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",

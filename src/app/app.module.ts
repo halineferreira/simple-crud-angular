@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { ModalModule } from 'ngx-bootstrap';
 
-import { Http ,HttpModule} from '@angular/http';
+import { Http ,HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { Http ,HttpModule} from '@angular/http';
     BrowserModule,
     FormsModule,
     ModalModule.forRoot(),
-    HttpModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

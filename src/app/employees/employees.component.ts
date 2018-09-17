@@ -1,9 +1,7 @@
-//import { EmployeesComponent } from './employees.component';
-//import { Component, OnInit } from '@angular/core';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Http, HttpModule } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http/src/static_response';
+import { HttpClient } from '@angular/common/http';
+import { contacts } from 'assets/employees.json'
 
 @Component({
   selector: 'app-employees',
@@ -18,12 +16,13 @@ export class EmployeesComponent implements OnInit {
   txtEditEmail: string;
   iEdit: number;
 
-  employees: any[] = []
+  employees: any[] = contacts;
+ 
 
-  constructor(private http: Http) { 
-    http.get('assets/employees.json').subscribe(result => {
-      this.employees = result.json() as EmployeesComponent[];
-    }, error => console.error(error));
+  constructor(private http: HttpClient) { 
+    // http.get('assets/employees.json').subscribe(result => {
+    //   this.employees = result.json() as EmployeesComponent[];
+    // }, error => console.error(error));
   }
 
   ngOnInit() {

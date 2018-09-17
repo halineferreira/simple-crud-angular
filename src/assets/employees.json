@@ -1,4 +1,4 @@
-[
+{"contacts":  [
     {
         "nome": "Haline Ferreira JSON",
         "email": "halineferreira@gmail.com"
@@ -400,3 +400,5 @@
         "email": "gisele.hulin@company.com"
     }
 ]
+
+}
