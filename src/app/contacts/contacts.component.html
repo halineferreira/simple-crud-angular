@@ -1,6 +1,6 @@
 <div>
   <br/>
-  <h1>Cadastro de Funcionários</h1>
+  <h1>Contatos</h1>
 
   <form>
     <div class="row">
@@ -28,9 +28,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let employee of employees; let i = index;">
-            <td>{{employee.nome}}</td>
-            <td>{{employee.email}}</td>
+          <tr *ngFor="let contact of contacts; let i = index;">
+            <td>{{contact.nome}}</td>
+            <td>{{contact.email}}</td>
             <td class="actions">
               <button type="button" class="btn btn-warning btn-xs" (click)="editItem(i); staticModal.show();">Editar</button>
               <button type="button" class="btn btn-danger btn-xs" (click)="removeItem(i)">Excluir</button>
@@ -47,7 +47,7 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title pull-left">Static modal</h4>
+        <h4 class="modal-title pull-left">Editar contato</h4>
         <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
           <span aria-hidden="true">&times;</span>
         </button>
