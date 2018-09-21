@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ModalModule } from 'ngx-bootstrap';
 
-import { Http ,HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [

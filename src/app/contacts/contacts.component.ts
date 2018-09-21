@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http/src/static_response';
 import { HttpClient } from '@angular/common/http';
-import { contacts } from '../../assets/contacts.json'
 
 @Component({
   selector: 'app-contacts',
@@ -15,12 +14,12 @@ export class ContactsComponent implements OnInit {
   txtEditNome: string;
   txtEditEmail: string;
   iEdit: number;
-  contacts: any[] = contacts;
+  contacts: any[];
 
   constructor(private http: HttpClient) { 
-    // http.get('assets/contacts.json').subscribe(result => {
-    //   this.contacts = result.json() as ContactsComponent[];
-    // }, error => console.error(error));
+    this.http.get('assets/contacts.json').subscribe(data => {
+      this.contacts = data['contacts'] as ContactsComponent[];
+    }, error => console.error(error));
   }
 
   ngOnInit() {
